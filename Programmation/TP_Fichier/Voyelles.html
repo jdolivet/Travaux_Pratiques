@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="TP fichier recherche Python" name="description">
+    <meta content="ISN, Python, fichier, lecture, caractère" name="keywords">
+    <meta content="Johann Dolivet" name="author">
+    <title>TP Python</title>
+    <link href="https://sites.google.com/site/sciencesdunumerique/favicon.ico" rel="icon">
+    <style>
+            body    {background-color:whitesmoke}
+            h1      {text-align:center;color:grey;font-size:200%}
+            p       {color:black}
+            code    {font-size:120%;font-weight: bold}
+            kbd     {font-size:120%;color:dimgrey;font-weight: bold}
+            footer  {font-size:80%;font-style:italic;text-align:right;}
+            ul  {line-height : 1}
+            #yourcode {font-family: courier;font-size: 12px;display: block;margin-left: auto;margin-right: auto;}
+    </style>
+</head>
+<body>
+    <header>
+        <img alt="" src="https://sites.google.com/site/sciencesdunumerique/config/customLogo.gif">
+        <h1>Parcourir un fichier</h1>
+    </header>
+    <section>
+        <p>L'objectif de cette activité est de travailler sur les fichiers.<br>
+        Il vous est demandé de créer une fonction : la fonction <code>voyelle(fichier)</code>.<br>
+        On suppose que, pour cette fonction, l'argument <code>fichier</code> est de type <code>str</code> : c'est donc une chaîne de caractère correspondant au nom du fichier (on ne considérera ici que des fichiers textes).</p>
+        <p>La fonction <code>voyelle()</code> prend comme paramètre une <b>chaîne de caractères</b> : <code>fichier</code>.<br>
+        Cette fonction <code>voyelle(fichier)</code> doit <b>retourner</b> un entier correspondant au nombre de voyelles contenu dans le fichier texte.</p>
+        <p>Voici le résultat attendu avec le fichier <kbd>alice.txt</kbd> disponible à cette <a href="http://www.jdolivet.byethost13.com/Travaux_Pratiques/Programmation/TP_Fichier/alice.txt" target="_blank">adresse</a> .</p>
+        <textarea cols="80" id="yourcode" rows="5">&gt;&gt;&gt; test = voyelle("alice.txt")
+&gt;&gt;&gt; print(test)
+49871</textarea>
+        <p>Il faut donc ecrire votre fonction dans un seul fichier.<br>
+        L'enregistrer sous la forme <kbd>prenom_nom_tpProg4.py</kbd> et l'envoyer par courriel.</p><button class="button" data-href="" onclick="masquemod('Aide');return false;">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Le fichier texte (par exemple <kbd>alice.txt</kbd>) doit être dans le même repertoire que votre script.</li>
+                <li>Nous ne considérerons que des textes en anglais pour faciliter la recherche des voyelles (pas de lettres accentuées).</li>
+                <li>Vous aurez compris qu'il faudra ouvrir (et donc le fermer!) le fichier <kbd>fichier.txt</kbd> en <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" target="_blank">lecture</a>, puis parcourir ce dernier.
+                </li>
+            </ul>
+        </div>
+        <script>
+        function masquemod(id){
+               if(document.getElementById(id).style.display=='none'){
+                  document.getElementById(id).style.display='block';
+               }else{
+                  document.getElementById(id).style.display='none';
+               }
+            }
+        </script>
+    </section>
+    <footer>
+        <br>
+        <br>
+        <p></p>
+    </footer>
+</body>
+</html>
