@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP fonction en Python">
+    <meta name="keywords" content="ISN, Python, boucle, fonction">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Boucle</h1>
+    </header>
+    <section>
+        <p>On souhaite construire une fonction <code>escalier()</code> prenant comme paramètre un entier <b>naturel</b> <code>n</code>.</p>
+        <br/>
+        <p>Cette fonction <code>escalier(n)</code> doit:</p>
+        <ul>
+            <li><b>imprimer</b> <code>"TypeError"</code> si <code>n</code> n'est pas de type <code>int</code>. Dans ce cas, elle devra <b>retourner</b> <code>-1</code>.</li>
+            <li><b>imprimer</b> <code>"ValueError"</code> si <code>n</code> est un entier strictement négatif. Dans ce cas, elle devra <b>retourner</b> <code>0</code>.</li>
+            <li><b>imprimer</b> un escalier possédant <code>n</code> marches avec un espace avant la première marche. Dans ce cas, elle devra <b>retourner</b> <code>1</code>.</li>
+        </ul>
+
+        <p>Voici quelques exemples d'exécution de la fonction (dans la console).</p>
+	
+	<textarea id="yourcode"  rows="22" cols="80">>>> escalier("TEST")
+TypeError
+-1
+>>> escalier(-1)
+ValueError
+0
+>>> escalier(5)
+     #
+    ##
+   ###
+  ####
+ #####
+1
+>>> escalier(0)
+1
+>>> test = escalier(2)
+  #
+ ##
+>>> print(test)
+1
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+        <button data-href="" onclick="masquemod('Aide');return false;" class="button">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Faites la distinction entre la fonction <code>print()</code> et l'instruction <code>return</code>.</li>
+                <li>L'instruction <code>return</code> entraîne l'arrêt de l'exécution du script.</li>
+                <li>La fonction <code>print()</code> admet des paramètres supplémentaires. Renseignez vous sur le paramètre <code>end</code> (sa valeur par défaut est <code>end='\n'</code>).</li>
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC CS50 Introduction to Computer Science</p>
+    </footer>
+</body>
+
+</html>

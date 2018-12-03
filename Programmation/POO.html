@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="TP Programmation Orientée Objet">
+    <meta name="keywords" content="ISN, Python, POO">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Indice de Masse Corporelle</h1>
+    </header>
+    <section>
+        <h2>Consignes</h2>
+        <p>Le but de cet exercice est de créer des « patients » qui ont un poids et une taille, et de calculer leur « Indice de Masse Corporelle » (IMC).</p>
+        <p>Vous devez définir la classe <code>Patient</code>.
+            <br> Un patient est caractérisé par un poids et une taille. Vous nommerez les attributs correspondants respectivement <code>masse</code> et <code>hauteur</code>.
+            <br> Par ailleurs, les méthodes spécifiques à un patient sont :
+            <ul>
+                <li>une méthode <code>__init__</code> prenant en paramètre deux flottants, le premier pour initialiser le poids du patient (en kg) et le second pour initialiser sa taille (en m).
+                    <br> Ces données ne seront affectées aux attributs du patient que si elles sont toutes les deux positives. Dans le cas contraire, la taille et le poids du patient seront tous deux initialisés à zéro.</li>
+                <li>une méthode <code>__str__</code> permettant d’afficher sur le terminal les caractéristiques du patient en respectant strictement le format suivant :
+                    <br>
+                    <center><code>Patient : </code><kbd>&lt;poids&gt;</kbd><code> kg pour </code><kbd>&lt;taille&gt;</kbd><code> m</code></center>
+                    où <kbd>&lt;poids&gt;</kbd> est à remplacer par le poids du patient et <kbd>&lt;taille&gt;</kbd> par sa taille.
+                    <br> Vous n’afficherez qu’un chiffre après la virgule pour le poids et la taille.</li>
+                <li>une méthode <code>imc</code> retournant l’IMC du patient : son poids divisé par le carré de sa taille. En cas de taille nulle, cette méthode retournera zéro.</li>
+            </ul>
+            Voici le script correspondant à un exemple.</p>
+
+	<textarea cols="80" id="yourcode" rows="9">John = Patient(78,1.78)
+print(John)
+poidsJohn = John.masse
+print(poidsJohn)
+tailleJohn = John.hauteur
+print(tailleJohn)
+imcJohn = John.imc()
+print(imcJohn)
+	</textarea>
+
+	<p>Et le résultat en console.</p>
+
+	<textarea cols="80" id="yourcode" rows="5">Patient : 78 kg pour 1.8 m
+78
+1.78
+24.61810377477591
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un seul fichier.<br>
+        L'enregistrer sous la forme <kbd>prenom_nom_tpPOO.py</kbd> et l'envoyer par courriel.</p><button class="button" data-href="" onclick="masquemod('Aide');return false;">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Attention aux conditions concernant l'initialisation des attributs.</li>
+                <li>Pour les arrondis, vous pourrez vous inspirer du code ci-dessous.</li>
+
+                <textarea cols="80" id="yourcode" rows="6">>>> x = 12.24644494
+>>> print(round(x,3))
+12.246
+>>> print("%.3f" % x)
+12.246
+		</textarea>
+
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        <br>
+        <br>
+        <p>Source : MOOC : <a href="https://www.coursera.org/course/intropoojava" target="_blank">Introduction à la programmation orientée objet (en Java)</a></p>
+    </footer>
+</body>
+</html>

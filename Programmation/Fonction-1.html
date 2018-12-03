@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP Généralités en Python">
+    <meta name="keywords" content="ISN, Python, condition">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Instruction conditionnelle</h1>
+    </header>
+    <section>
+	<p>On souhaite construire une fonction <code>compare()</code> prenant comme paramètres deux variables <code>varA</code> et <code>varB</code>.
+	<br>
+	Ces variables ont chacune une valeur (soit un nombre, soit une chaîne de caractères).</p>
+        <br/>
+        <p>Cette fonction <code>compare(varA, varB)</code> doit <b>retourner</b> :</p>
+        <ul>
+            <li><code>"string involved"</code> si soit <code>varA</code>, soit <code>varB</code> est une chaîne de caractères.</li>
+            <li><code>"bigger"</code> si <code>varA</code> est plus grande que <code>varB</code>.</li>
+            <li><code>"equal"</code> si <code>varA</code> est égale à <code>varB</code>.</li>
+	    <li><code>"smaller"</code> si <code>varA</code> est plus petite que <code>varB</code>.</li>
+        </ul>
+
+        <p>Voici quelques exemples d'exécution de la fonction (dans la console).</p>
+	
+	<textarea id="yourcode"  rows="7" cols="80">>>> compare("ISN", 3)
+'string involved'
+>>> compare(3.14, 3)
+'bigger'
+>>> compare(12.8, 12.81)
+'smaller'
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+        <button data-href="" onclick="masquemod('Aide');return false;" class="button">Coup de pouce</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Faites la distinction entre la fonction <code>print()</code> et l'instruction <code>return</code>.</li>
+                <li>La fonction <code>type()</code> pourra vous aider!</li>
+            </ul>
+            <p style="text-align:center"></p>
+        </div>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC Introduction to Computer Science and Programming Using Python</p>
+    </footer>
+</body>
+
+</html>

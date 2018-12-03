@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="TP tableau bidimentionnel Python">
+    <meta name="keywords" content="ISN, Python, tableau, bidimentionnel, voisinage">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Parcourir un tableau bidimentionnel</h1>
+    </header>
+    <section>
+        <h2>Introduction</h2>
+        <p>Dans un automate cellulaire sur un damier bidimentionnel, le <b>voisinage de Moore</b> d'une cellule est constitué des huit cellules qui entourent cette cellule centrale.
+            <br> Ce voisinage porte le nom de Edward F. Moore, pionnier de la théorie des automates cellulaires.
+            <br> De nombreux jeux de plateau se jouent sur une grille rectangulaire composée de cellules carrées.
+            <br> Dans certains jeux, il est important de connaître la disposition des cellules voisines du pion afin de savoir comment le déplacer et d'élaborer une stratégie.</p>
+        <p>L'état du plateau rectangulaire d'un jeu vous est communiqué avec la position des pions, sous la forme d'une matrice où 1 représente un pion et 0 une case vide.
+            <br> Les lignes et les colonnes du plateau sont numérotées à partir de 0.
+            <br> Les coordonnées d'une cellule (numéro de ligne, numéro de colonne) vous sont également données.
+            <br> Il vous faut déterminer combien de pions sont près de cette cellule.
+            <br> Chaque cellule interagit avec ses huit cellules voisines : celles qui lui sont adjacentes horizontalement, verticalement, ou en diagonale.</p><img class="displayed" src="images/exempleMoore.svg" alt="exemple">
+        <p>Sur les exemples ci-dessus, on considère la même grille:
+            <br> ((1, 0, 0, 1, 0),
+            <br> (0, 1, 0, 0, 0),
+            <br> (0, 0, 1, 0, 1),
+            <br> (1, 0, 0, 0, 0),
+            <br> (0, 0, 1, 0, 0),)
+            <br>
+            <br> Pour le premier exemple, les coordonnées de la case considérée sont (1, 2), et comme indiqué sur le schéma, cette case a trois pions dans les cases voisines.
+            <br> Pour le second exemple, les coordonnées sont (0, 0) et cette case contient un pion, mais on ne compte qu'un pion dans les cases voisines ; la réponse est ici 1.</p>
+        <h2>Consignes</h2>
+        <p>L'objectif de cette activité est de travailler sur un tableau bidimentionnel.
+            <br> Il vous est demandé de créer une fonction : la fonction <code>voisinage(tableau, i, j)</code>.
+            <br> On suppose que, pour cette fonction, l'argument <code>tableau</code> est de type <code>tuple</code> : c'est un tuple de tuples (donc un tableau à deux dimensions) contenant les entiers 0 ou 1.
+            <br> Par ailleurs, le tableau possède le même nombre de lignes que de colonnes : on appelle <b>n</b> la dimension du tableau. On suppose que n ≥ 3.
+            <br> De plus <code>i</code> et <code>j</code> sont des entiers naturels permettant de repérer une case sur le tableau (ce sont les coordonnées de la case). On suppose que 0 ≤ i ≤ n et 0 ≤ j ≤ n.</p>
+        <p>La fonction <code>voisinage()</code> prend comme paramètres un tuple (de tuples) et deux entiers.
+            <br> Cette fonction <code>voisinage(tableau, i, j)</code> doit <b>retourner</b> un entier correspondant au nombre de cellules avoisinantes la case de coordonnées (i, j).</p>
+        <p>Voici le script correspondant à une série de tests portant sur la fonction.</p>
+
+        <textarea cols="80" id="yourcode" rows="30">print("cas 1 :")
+tab1 = ((1, 0, 0, 1, 0),
+(0, 1, 0, 0, 0),
+(0, 0, 1, 0, 1),
+(1, 0, 0, 0, 0),
+(0, 0, 1, 0, 0),)
+
+for ligne in tab1:
+    print(ligne)
+
+test1 = voisinage(tab1,0,0)
+print("voisinage de (0,0) : ", test1)
+test2 = voisinage(tab1,1,2)
+print("voisinage de (1,2) : ", test2)
+
+print()
+print("cas 2 :")
+tab2 = ((0, 0, 1, 0),
+(1, 0, 0, 0),
+(0, 1, 0, 1),
+(0, 0, 0, 0),)
+
+for ligne in tab2:
+    print(ligne)
+
+test3 = voisinage(tab2,0,2)
+print("voisinage de (0,2) : ", test3)
+test4 = voisinage(tab2,2,0)
+print("voisinage de (2,0) : ", test4)
+	</textarea>
+
+	<p>Et le résultat en console.</p>
+
+        <textarea cols="80" id="yourcode" rows="18">>>> 
+cas 1 :
+(1, 0, 0, 1, 0)
+(0, 1, 0, 0, 0)
+(0, 0, 1, 0, 1)
+(1, 0, 0, 0, 0)
+(0, 0, 1, 0, 0)
+voisinage de (0,0) :  1
+voisinage de (1,2) :  3
+
+cas 2 :
+(0, 0, 1, 0)
+(1, 0, 0, 0)
+(0, 1, 0, 1)
+(0, 0, 0, 0)
+voisinage de (0,2) :  0
+voisinage de (2,0) :  2
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un seul fichier.
+            <br> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+        <button class="button" data-href="" onclick="masquemod('Aide');return false;">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Vous aurez compris qu'il faut se repérer dans le tableau bidimentionnel.</li>
+                <li>L'une des difficultés consiste en la bonne gestion des bordures.</li>
+                <li>On utilise ici une structure composée : les tuples. En effet, nous souhaitons ne pas modifier le tableau (une structure <b>immutable</b> est donc adaptée).</li>
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        <br>
+        <br>
+        <p>Source : <a href="http://www.checkio.org/" target="_blank">http://www.checkio.org/</a></p>
+    </footer>
+</body>
+
+</html>

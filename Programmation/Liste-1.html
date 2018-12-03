@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP extremum liste en Python">
+    <meta name="keywords" content="ISN, Python, liste, index, recherche">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Minimum d'une liste</h1>
+    </header>
+    <section>
+        <p>L'objectif de cette activité est de travailler sur les listes.
+            <br> Il vous est demandé de créer <b>deux</b> fonctions : la fonction <code>valMin(l)</code> et la fonction <code>indexMin(l)</code>.
+            <br> On suppose que, pour chacune de ces fonctions, l'argument <code>l</code> est de type <code>list</code> et les éléments de la liste sont soit tous des nombres, soit tous des chaînes de caractères.</p>
+        <ul>
+            <li>
+                <p>La fonction <code>valMin()</code> prend comme paramètre une <b>liste</b> <code>l</code>.
+                    <br> Cette fonction <code>valMin(l)</code> doit <b>retourner</b> <code>False</code> si la liste <code>l</code> est vide et l'élément minimum de la liste <code>l</code> sinon.</p>
+            </li>
+
+            <li>
+                <p>La fonction <code>indexMin()</code> prend comme paramètre une <b>liste</b> <code>l</code>.
+                    <br> Cette fonction <code>indexMin(l)</code> doit <b>retourner</b> <code>False</code> si la liste <code>l</code> est vide et l'index de l'élément minimum de la liste <code>l</code> sinon.
+                    <br> Si le minimum de la fonction apparaît plusieurs fois dans la liste, la fonction retournera l'index de la <b>dernière</b> apparition.</p>
+            </li>
+
+        </ul>
+
+        <p>Voici le script correspondant à une série de tests portant sur les fonctions.</p>
+
+        <textarea cols="80" id="yourcode" rows="14">test0 = []
+test1 = [1, 5, -12, 6, -8, 9, 10, 1, -12, -5, -1]
+test2 = ["Nicolas", "Pierre", "Arthur", "Fabien", "Lionel", "Margot", "Samuel"]
+
+#tests pour la fonction valMin
+print(valMin(test0))
+print(valMin(test1))
+print(valMin(test2))
+
+#tests pour la fonction indexMin
+print(indexMin(test0))
+print(indexMin(test1))
+print(indexMin(test2))
+	</textarea>
+
+	<p>Et le résultat en console.</p>
+
+        <textarea cols="80" id="yourcode" rows="8">>>> 
+False
+-12
+Arthur
+False
+8
+2
+	</textarea>
+
+        <p>Il faut donc ecrire vos fonctions dans un seul fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+        <button data-href="" onclick="masquemod('Aide');return false;" class="button">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Vous aurez compris que l'objectif est de parcourir le conteneur (ici la liste).</li>
+                <li>Il est, bien entendu, interdit d'utiliser la fonction <code>min()</code> ou la méthode <code>index()</code> et/ou une méthode de tri de liste (<code>sorted()</code>, ...).</li>
+            </ul>
+            <p></p>
+        </div>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p></p>
+    </footer>
+</body>
+
+</html>
