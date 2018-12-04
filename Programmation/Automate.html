@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="TP Automate">
+    <meta name="keywords" content="ISN, Picobot, Turing, automate, états">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Automate</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Automate</h1>
+    </header>
+    <section>
+	<p><a href="https://www.cs.hmc.edu/picobot/" target="_blank">Picobot</a> est un robot se déplaçant dans un environnement à deux dimensions.
+	<br>L'objectif est de programmer le robot pour qu'il parcourt l'intégralité de la pièce (le robot laisse une trace grise lors de son passage).</p>
+	<h2>Description</h2>
+	<ul>
+		<li>Le robot se déplace selon les 4 directions N (Nord), E (Est), W (Ouest) et S (Sud).</li>
+		<li>Le robot dispose de capteurs lui permettant de détecter un obstacle su l'une des cases adjacentes (dans chacune des 4 directions) : un <code>x</code> représente un espace vide et la lettre représentant la direction (<code>N</code>, <code>E</code>, <code>W</code>, <code>S</code> toujours dans cet ordre) représente un obstacle bloquant cette direction.</li>
+		<li>Le robot peut changer d'états (il dispose de 100 états numérotés de 0 à 99).</li>
+	</ul>
+	<h2>Initialisation</h2>
+	<ul>
+		<li>Le robot commence à une position aléatoire dans la salle.</li>
+		<li>Le robot commence à <code>l'Etat 0</code>.</li>
+	</ul>
+	<h2>Fonctionnement</h2>
+	<p>Le robot se déplace selon le modèle suivant :
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;<code>EtatActuel&nbsp; &nbsp; &nbsp; &nbsp;Environnement&nbsp; &nbsp; &nbsp; &nbsp;->&nbsp; &nbsp; &nbsp; &nbsp;Déplacement&nbsp; &nbsp; &nbsp; &nbsp;EtatSuivant</code>
+	<br>
+	<br>
+	Par exemple, l'instruction :
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;<code>0&nbsp; &nbsp; &nbsp; &nbsp;xxxS&nbsp; &nbsp; &nbsp; &nbsp;->&nbsp; &nbsp; &nbsp; &nbsp;N&nbsp; &nbsp; &nbsp; &nbsp;0</code>
+	<br>
+	signifie : 
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;Si le robot est à <code>l'Etat 0</code> et que son Environnement est <code>xxxS</code> (pas d'obstacle au <code>Nord</code>, ni à l'<code>Est</code>, ni à l'<code>Ouest</code> et un obstacle au <code>Sud</code>) alors le robot se déplace d'une case vers le <code>Nord</code> et le robot reste à l'<code>Etat 0</code>.
+	<br>
+	<br>
+	L'instruction de Déplacement peut être <code>N</code> ou <code>E</code> ou <code>W</code> ou <code>S</code> ou <code>X</code> : <code>X</code> signifie que le robot ne se déplace pas.</p>
+	<br>
+	<p>
+	<b>Remarque :</b>
+	<br>
+	L'instruction * signifie que le robot ne s’intéresse pas à tel direction (il ne cherche pas à savoir si il y a un obstacle ou non).
+	<br>
+	Par exemple, l'instruction :
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;<code>0&nbsp; &nbsp; &nbsp; &nbsp;x***&nbsp; &nbsp; &nbsp; &nbsp;->&nbsp; &nbsp; &nbsp; &nbsp;N&nbsp; &nbsp; &nbsp; &nbsp;0</code>
+	<br>
+	signifie : 
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;Si le robot est à l'<code>Etat 0</code> et que son Environnement est <code>x***</code> (pas d'obstacle au <code>Nord</code>) alors le robot se déplace d'une case vers le <code>Nord</code> et le robot reste à l'<code>Etat 0</code>.</p>
+
+	<h2>Consignes</h2> 
+	<p>Vous devez donc programmer le robot pour qu'il parcourt l'intégralité de la pièce.
+	<br>
+	Pour cela, il faut définir les consignes dans la fenêtre droite, valider ces consignes (<code>Enter rules for Picobot</code>), puis démarrer la simulation (les commandes sont sous la fenêtre de gauche). 
+	<br>
+	La fenêtre de droite est pré-remplie avec une série d'instructions par défaut (vous pouvez observer le fonctionnement du robot respectant cette série d'instructions) que vous devrez effacer/modifier.
+	<br>
+	Vous pouvez réinitialiser la fenêtre de gauche par la commande <code>Reset</code>.</p>
+	<br>
+	<a href="scripts/Picobot/index.html" target="_blank">lien vers le TP</a>
+	<br>
+	<p>Lorsque vous avez trouvé le code correct, renvoyez le fichier <code>Robot</code> par retour de courriel.
+	<br>
+	<b>Attention!</b> Il n'est pas possible de sauvegarder votre travail. Ceci implique que vous devez effectuer ce TP en une seule session. 
+	<br>
+	Pensez donc à sauvegarder votre code (dans un éditeur de texte, par exemple).</p>
+
+    </section>
+    <footer>
+        <br>
+        <br>
+        <p>Source : MOOC : <a href="https://www.edx.org/course/cs-all-introduction-computer-science-harveymuddx-cs005x-0" target="_blank">CS For All</a>, Harvey Mudd</p>
+    </footer>
+</body>
+</html>

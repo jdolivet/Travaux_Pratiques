@@ -4,5 +4,9 @@ p    	{color:black}
 code 	{font-size:120%;font-weight: bold}
 kbd 	{font-size:120%;color:dimgrey;font-weight: bold}
 footer	{font-size:80%;font-style:italic;text-align:right;}
-ul	{line-height : 1.5}
+ul,ol   {line-height : 1.5}
+table   {border-collapse: collapse;margin-left : auto;margin-right : auto;background-color:white}
+table, th, td {border: 1px solid black;}
+table.center {margin-left:auto;margin-right:auto;}
+img.displayed {display: block; margin-left: auto; margin-right: auto }
 #yourcode {font-family: monospace;font-size: 12px;display: block;margin-left: auto;margin-right: auto;}

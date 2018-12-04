@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP information image Python">
+    <meta name="keywords" content="ISN, Python, fichier, binaire, jpg">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Information</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Carte mémoire</h1>
+    </header>
+    <section>
+        <p>Suite à un problème technique avec un appareil photo, la carte mémoire a été endommagée. Des experts ont toutefois réussi à en récupérer une bonne partie.
+            <br/>
+
+            <p>Vous vous retrouvez donc en possesion de ce <a href="datas/MemoryCard">fichier binaire</a> : <kbd>MemoryCard</kbd>. L'objectif de cette activité sera de retrouver les photos prises par cet appareil (et donc disponible sur la carte mémoire).</p>
+
+            <p>Vous êtes libre d'utiliser le fichier et le traiter (grâce à Python) comme vous le souhaitez.</p>
+            <p>Le format des photos est <kbd>jpg</kbd>. Ce format est plus compliqué à appréhender car la composition d'un fichier <kbd>jpg</kbd> n'est pas constitué d'une suite de pixels (décliné en RGB).
+                <br/> Par contre, vous disposez des informations suivantes : </p>
+
+            <ul>
+                <li>
+                    <p>La carte mémoire utilisée par les appareils photos est au format <kbd>FAT</kbd>, ce qui implique que les informations sont stockées sous la forme de blocs de taille 512 bytes.</p>
+                </li>
+
+                <li>
+                    <p>Les quatre premiers octets d'un fichier <kbd>jpg</kbd> sont <kbd>0xff 0xd8 0xff 0xe0</kbd> ou alors <kbd>0xff 0xd8 0xff 0xe1</kbd>.</p>
+                </li>
+            </ul>
+            <p>Voici à quoi correspondrait le fichier <kbd>MemoryCard</kbd> dont vous disposez : </p>
+            <img class="displayed" src="images/MemoryCard.png">
+
+            <p>Il faut donc ecrire votre code dans un fichier.
+                <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpInfo.py</kbd> et l'envoyer, ainsi que toutes les photos récupérées, dans un dossier compressé <kbd>prenom_nom_tpInfo.zip</kbd> par courriel.</p>
+
+            <button data-href="" onclick="masquemod('Aide');return false;" class="button">Remarques</button>
+            <div id="Aide" style="display:none;">
+                <ul>
+                    <li>Le fichier <kbd>MemoryCard</kbd> doit être dans le même repertoire que votre script.</li>
+
+                    <li>Il faudra dans cette activité ouvrir des fichiers en lecture (binaire avec le paramètre <code>'rb'</code>) et d'autre(s) fichier(s) en écriture (binaire également avec le paramètre <code>'ab'</code>).</li>
+                    <li>Les informations étant divisées en blocs de taille 512 octets, vous pourrez utiliser la fonction <code>read()</code> de façon appropriée.</li>
+                    <li>Ne sachant pas combien de photos sont sur la carte, il faut donc penser à la manière dont vous ouvrirez et fermerez les fichiers : vous devrez créer un certain nombre de fichiers (par exemple : <kbd>photo1.jpg</kbd>, <kbd>photo2.jpg</kbd>, ...).</li>
+                    <li>La fonction <code>bytes()</code> vous sera utile pour la réécriture des données.</li>
+                </ul>
+            </div>
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC CS50 Introduction to Computer Science</p>
+    </footer>
+</body>
+
+</html>

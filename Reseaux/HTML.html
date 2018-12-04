@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="TP HTML">
+    <meta name="keywords" content="ISN, HTML, WEB">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP HTML</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Site WEB</h1>
+    </header>
+    <section>
+        <h2>Consignes</h2>
+        <p>Le but de cet exercice est de créer un site WEB sur le personnage d'Alan Turing, figure centrale de l'informatique du 20<sup>e</sup> siècle.</p>
+        <p>Vous êtes libre d'utiliser les outils de votre choix (un éditeur de texte et un navigateur suffisent).</p>
+        Voici le squelette d'un document HTML :
+
+	<textarea cols="80" id="yourcode" rows="14">﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exemple site Web">
+    <meta name="keywords" content="ISN, HTML, Alan Turing">
+    <meta name="author" content="Johann Dolivet">
+    <title>Page web</title>
+</head>
+<body>
+    ...
+</body>
+</html>
+	</textarea>
+        <p>Le site sera constitué de 3 pages.</p>
+        <ul>
+            <li>Une page <code>index.html</code>, qui sera, comme dans tout site web, la page d'accueil.
+                <br> En particulier, on y trouvera l'image <kbd>Turing.jpg</kbd>, des liens vers les autres pages de notre site et vers quelques autres sites sur Alan Turing.</li>
+            <li>Une page <code>enigma.html</code> qui donnera des informations sur la <b>machine à coder Enigma</b> et contiendra l'image <kbd>Enigma.jpg</kbd>.</li>
+            <li>Une page <code>machine.html</code> qui contiendra un petit texte sur les <b>machines de Turing</b> avec une image <kbd>Machine.jpg</kbd>.</li>
+        </ul>
+        Voici les étapes pour réaliser votre site :
+        <ol>
+            <li><code>index.html</code>.
+                <br> Créez la page <code>index.html</code>.
+                <br> Celle ci contient un court texte introductif et une image (centrée) d'Alan Turing (vous pouvez trouvez une image à cette <a href="https://upload.wikimedia.org/wikipedia/commons/7/79/Alan_Turing_az_1930-as_%C3%A9vekben.jpg" target="_blank">adresse</a>). Vous devrez utiliser l'URL absolue de l'image (l'image ne sera pas présente dans votre dossier).
+                <br> La page contient également des liens vers les autres pages de ce site (<code>enigma.html</code> et <code>machine.html</code>) ainsi que des liens vers le site de la <a href="http://www.cite-sciences.fr/fr/ressources/bibliotheque-en-ligne/portraits-de-savants/alan-turing/" target="_blank">cité des sciences</a> et le site d'<a href="http://future.arte.tv/fr/alan-turing-un-genie-dans-la-guerre" target="_blank">Arte</a>.</li>
+            <li><code>enigma.html</code>.
+                <br> Créez la page <code>enigma.html</code>.
+                <br> Celle ci contient un court texte descriptif et une image (centrée) de la machine Enigma (vous pouvez trouvez une image à cette <a href="https://commons.wikimedia.org/wiki/Category:Enigma_machines_in_the_National_Cryptologic_Museum" target="_blank">adresse</a>). Vous devrez utiliser l'URL relative de l'image (l'image choisie devra donc être présente dans votre dossier).
+                <br> Vous devrez également construire un tableau (2 lignes, 2 colonnes) donnant un exemple de message codé à partir de la machine Enigma (ce <a href="http://enigmaco.de/enigma/enigma.html" target="_blank">site</a> pourra vous être utile).</li>
+            <li><code>machine.html</code>.
+                <br> Créez la page <code>machine.html</code>.
+                <br> Celle ci contient un court texte descriptif et devra intégrer la <a href="http://videotheque.cnrs.fr/doc=3001" target="_blank">vidéo suivante</a> (le lien mp4 se trouve à cette <a href="http://videotheque.cnrs.fr/media/visionnage/1465863176.86398900/MN00072_logo_00000000_00062300.mp4" target="_blank">adresse</a>).</li>
+        </ol>
+        <p>Il faut donc réunir vos pages (et vos fichiers nécessaires) dans un seul dossier.
+            <br> Le compresser et l'enregistrer sous la forme <kbd>prenom_nom_siteTuring.zip</kbd> et l'envoyer par courriel.</p>
+        <button class="button" data-href="" onclick="masquemod('Aide');return false;">Remarques</button>
+        <div id="Aide" style="display:none;">
+            <ul>
+                <li>Le site <a target="_blank" href="http://www.w3schools.com/default.asp">W3Schools</a> pourra vous être utile.</li>
+                <li>Pensez à gérer votre mise en forme : les <b>css</b> seront présents dans les entêtes ou, encore mieux, dans un fichier <b>.css</b>.</li>
+                <li>N'oubliez pas d'adapter les balises META dans l'entête des fichiers.</li>
+                <li>Vous pouvez vérifiez la correction de votre fichier html à cette <a target="_blank" href="https://validator.w3.org/nu/#textarea">adresse</a>.</li>
+                <li>Le codage est en quelque sorte la manière dont votre éditeur de texte a enregistré votre page web. Il a une influence notamment sur les caractères autorisés dans votre document.
+                    <br> Selon l'éditeur de texte utilisé, le codage est indiqué dans la fenêtre de dialogue qui apparaît lorsqu'on fait 'Enregistrer Sous'. Si le choix vous est offert, préférez un encodage Unicode (UTF-8).</li>
+            </ul>
+        </div>
+
+    </section>
+    <section>
+        <h2>Annexes</h2>
+        <p>Voici les captures d'écran des pages demandées (il ne s'agit que d'un exemple!).</p>
+        <table>
+            <tr>
+                <th>index.html</th>
+                <th>enigma.html</th>
+                <th>machine.html</th>
+            </tr>
+            <tr>
+                <td><img class="displayed" src="images/Turing-index.png" width="80%"></td>
+                <td><img class="displayed" src="images/Turing-enigma.png" width="80%"></td>
+                <td><img class="displayed" src="images/Turing-machine.png" width="80%"></td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <br>
+        <br>
+        <p>Source : <a href="http://www.grappa.univ-lille3.fr/" target="_blank">TP HTML GRAppA</a></p>
+    </footer>
+</body>
+
+</html>

@@ -2,29 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta content="TP Construction circuit combinatoire" name="description">
-    <meta content="ISN, Logisim, portes, logique, combinatoire, fonctions, booléen, circuit" name="keywords">
-    <meta content="Johann Dolivet" name="author">
+    <meta name="description" content="TP Construction circuit combinatoire">
+    <meta name="keywords" content="ISN, Logisim, portes, logique, combinatoire, fonctions, booléen, circuit">
+    <meta name="author" content="Johann Dolivet">
+
     <title>TP Architecture</title>
-    <link href="https://sites.google.com/site/sciencesdunumerique/favicon.ico" rel="icon">
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <style>
-            body    {background-color:whitesmoke}
-            h1      {text-align:center;color:grey;font-size:200%}
-            p       {color:black}
-            code    {font-size:120%;font-weight: bold}
-            kbd     {font-size:120%;color:dimgrey;font-weight: bold}
-            footer  {font-size:80%;font-style:italic;text-align:right;}
-            ul      {line-height : 1}
-            table   {border-collapse: collapse;text-align: center;background-color:white;font-family: courier}
+            table   {border-collapse: collapse;text-align: center;background-color: white;font-family: courier}
 	    td      {border: 1px solid black;width:50px}
-   	    th      {border: 1px solid black; }
-  	    table.center {margin-left:auto;margin-right:auto;}
-	    img.displayed {display: block; margin-left: auto; margin-right: auto }
     </style>
+    <script src="../scripts/bouton.js"></script>
 </head>
+
 <body>
     <header>
-        <img alt="" src="https://sites.google.com/site/sciencesdunumerique/config/customLogo.gif">
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
         <h1>Construire un circuit</h1>
     </header>
     <section>
@@ -87,9 +81,9 @@
 	</table>
 
         <p>Il faut construire le circuit à l'aide du logiciel Logisim.</p>
-	<img class="displayed" src="Circuit.png">
+	<img class="displayed" src="images/Circuit.png">
 	<p>Vous devriez obtenir quelque chose comme cela.</p>
-	<img class="displayed" src="Circuit2.png" height="200">
+	<img class="displayed" src="images/Circuit2.png" height="200">
 	<p>Le logiciel est disponible à cette <a href="http://www.cburch.com/logisim/"  target="_blank">adresse</a>.<br>
         L'enregistrer sous la forme <kbd>prenom_nom_tpArchi.circ</kbd> et l'envoyer par courriel.</p><button class="button" data-href="" onclick="masquemod('Aide');return false;">Remarques</button>
         <div id="Aide" style="display:none;">
@@ -101,15 +95,7 @@
 		<li>Vous ferez clairement apparaître le nom de chaque entrées (et sortie).</li>
             </ul>
         </div>
-        <script>
-        function masquemod(id){
-               if(document.getElementById(id).style.display=='none'){
-                  document.getElementById(id).style.display='block';
-               }else{
-                  document.getElementById(id).style.display='none';
-               }
-            }
-        </script>
+
     </section>
     <footer>
         <br>
