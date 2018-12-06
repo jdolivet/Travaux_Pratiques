@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP Généralités en Python">
+    <meta name="keywords" content="ISN, Python, liste, index">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Listes</h1>
+    </header>
+    <section>
+	<p>Vous devez écrire une fonction <code>laccess()</code> qui prend en argument une liste, et qui retourne :
+        <ul>
+            <li><code>None</code> si la liste est vide</li>
+            <li>sinon le dernier élément de la liste si elle est de taille paire</li>
+	    <li>et sinon l'élément du milieu.</li>
+        </ul>
+	Voici quelques exemples :</p>
+	
+	<textarea id="yourcode"  rows="15" cols="80">>>> laccess([])
+None
+>>> laccess([1])
+1
+>>> laccess(['spam', 2])
+2
+>>> laccess(['spam', 2])
+2
+>>> laccess(['spam', 2, 'bacon'])
+2
+>>> laccess([1, 2, 3, 4])
+4
+>>> laccess([1, 2, 3, 4, 5])
+3
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC Python 3 : des fondamentaux aux concepts avancés du langage</p>
+    </footer>
+</body>
+
+</html>

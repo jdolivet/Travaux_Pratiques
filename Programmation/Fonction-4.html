@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP fonction en Python">
+    <meta name="keywords" content="ISN, Python, condition, fonction">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Instruction conditionnelle</h1>
+    </header>
+    <section>
+        <p>On veut définir en Python une fonction <code>morceaux()</code> qui représente une fonction définie par morceaux :</p>
+
+	<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;f:&space;x&space;\mapsto&space;\left\{&space;\begin{array}{ll}&space;-x&space;-&space;5&space;&&space;\mbox{si&space;}&space;x&space;\leqslant&space;-5&space;\\&space;0&space;&&space;\mbox{si&space;}&space;x&space;\in&space;]-5,&space;5[&space;\\&space;\frac{1}{5}x&space;-1&space;&&space;\mbox{si&space;}&space;x&space;\geqslant&space;5&space;\\&space;\end{array}&space;\right." target="_blank"><img class="displayed" src="images/FonctionMorceaux.gif" alt="Fonction par morceaux"></a>
+
+        <p>Voici quelques exemples d'exécution de la fonction (dans la console).</p>
+	
+	<textarea id="yourcode"  rows="7" cols="80">>>> morceaux(-10)
+5
+>>> morceaux(0)
+0
+>>> morceaux(10)
+1.0
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC Python 3 : des fondamentaux aux concepts avancés du langage</p>
+    </footer>
+</body>
+
+</html>

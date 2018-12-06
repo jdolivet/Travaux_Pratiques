@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP fonction en Python">
+    <meta name="keywords" content="ISN, Python, condition, fonction">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+    <style>
+            table   {border-collapse: collapse;text-align: center;background-color: white;font-family: courier}
+	    td      {border: 1px solid black;width:100px}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Instruction conditionnelle</h1>
+    </header>
+    <section>
+        <p>On vous demande d'écrire une fonction <code>dispatch()</code>, qui prend en argument deux entiers <code>a</code> et <code>b</code>, et qui renvoie selon les cas :</p>
+
+	<table class="center">
+	    <tr>
+	       	<td></td>
+	       	<td>a pair</td>
+	       	<td>a impair</td>
+	    </tr>
+	    <tr>
+	       	<td>b pair</td>
+	       	<td>a²+b²</td>
+	       	<td>(a−1)∗b</td>
+	    </tr>
+	    <tr>
+	       	<td>b impair</td>
+	       	<td>a∗(b-1)</td>
+	       	<td>a²-b²</td>
+	    </tr>
+	</table>
+
+        <p>Voici un exemple d'exécution de la fonction (dans la console).</p>
+	
+	<textarea id="yourcode"  rows="3" cols="80">>>> dispatch(3, 7)
+-40
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC Python 3 : des fondamentaux aux concepts avancés du langage</p>
+    </footer>
+</body>
+
+</html>

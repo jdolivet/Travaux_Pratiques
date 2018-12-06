@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="description" content="TP Généralités en Python">
+    <meta name="keywords" content="ISN, Python, condition">
+    <meta name="author" content="Johann Dolivet">
+
+    <title>TP Python</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/bouton.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/customLogo.gif" alt="Logo ISN" />
+        <h1>Formatage des chaines de caractères</h1>
+    </header>
+    <section>
+	<p>Vous devez écrire une fonction <code>label()</code> qui prend deux arguments :
+        <ul>
+            <li>une chaîne de caractères qui désigne le <code>prénom</code> d'un élève</li>
+            <li>un entier qui indique la <code>note</code> obtenue.</li>
+        </ul>
+	</p>
+	<p>Elle devra retourner une chaîne de caractères selon que la note est
+        <ul>
+            <li>0 ⩽ <code>note</code> < 10 </li>
+            <li>10 ⩽ <code>note</code> < 16 </li>
+	    <li>16 ⩽ <code>note</code> ⩽ 20 </li>
+        </ul>
+	comme on le voit sur les exemples :</p>
+	
+	<textarea id="yourcode"  rows="7" cols="80">>>> label('Rémi', 10)
+'Rémi est reçu'
+>>> label('Marie', 17)
+'félicitations à Marie'
+>>> label('Kevin', 8)
+'Kevin est recalé'
+	</textarea>
+
+        <p>Il faut donc ecrire votre fonction dans un fichier.
+            <br/> L'enregistrer sous la forme <kbd>prenom_nom_tpProg.py</kbd> et l'envoyer par courriel.</p>
+
+    </section>
+    <footer>
+        <br/>
+        <br/>
+        <p>Source : MOOC Python 3 : des fondamentaux aux concepts avancés du langage</p>
+    </footer>
+</body>
+
+</html>
