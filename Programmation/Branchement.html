@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+   		<meta charset=utf-8>
+		<meta name="description" content="TP Généralités en Python">
+		<meta name="keywords" content="ISN, Python, condition">
+		<meta name="author" content="Johann Dolivet">
+
+    	<title>TP Python</title>
+		<link rel="icon" href="https://sites.google.com/site/sciencesdunumerique/favicon.ico" />
+		<style>
+			body 	{background-color:whitesmoke}
+			h1   	{text-align:center;color:grey;font-size:200%}
+			p    	{color:black}
+			code 	{font-size:120%;font-weight: bold}
+			kbd 	{font-size:120%;color:dimgrey;font-weight: bold}
+			footer	{font-size:80%;font-style:italic;text-align:right;}
+			ul	{line-height : 1.5}
+		</style>
+  	</head>
+  	<body>
+	   	<header>
+			<img src="https://sites.google.com/site/sciencesdunumerique/config/customLogo.gif" alt="" />	
+	      	<h1>Instruction conditionnelle</h1>
+	    </header>
+		<section>		
+			<p>On suppose que l'on a deux variables : <code>varA</code> et <code>varB</code>.<br/>
+			Ces variables ont chacune une valeur (soit un nombre, soit une chaîne de caractères).</p>
+
+			<p>Ecrire un bout de code qui imprime l'<b>un</b> des messages suivants :</p>
+			<ul>
+				<li><code>"string involved"</code> 	si 	soit <code>varA</code>, soit <code>varB</code> est une chaîne de caractères.</li>
+				<li><code>"bigger"</code>		si	<code>varA</code> est plus grande que <code>varB</code>.</li>
+				<li><code>"equal"</code>		si	<code>varA</code> est égale à <code>varB</code>.</li>
+				<li><code>"smaller"</code>		si	<code>varA</code> est plus petite que <code>varB</code>.</li>
+			</ul>
+
+			<p>Pour ce problème, votre réponse ne devra pas utiliser la commande <code>input</code> et ne pas définir les variables <code>varA</code> et <code>varB</code>.<br/>
+			Le test automatique fournira des valeurs pour <code>varA</code> et <code>varB</code>.</p>
+
+			<p>Il faut donc ecrire votre portion de code dans un fichier.<br/>
+			L'enregistrer sous la forme <kbd>prenom_nom_tpProg1.py</kbd> et l'envoyer par courriel.</p>
+
+		<button data-href="" onclick="masquemod('Aide');return false;" class="button">Coup de pouce</button>
+			<div id="Aide" style="display:none;">
+			       <p style="text-align:center">La fonction <code>type()</code> pourra vous aider!</p>
+			</div>
+			<script>function masquemod(id){
+			   if(document.getElementById(id).style.display=='none'){
+			      document.getElementById(id).style.display='block';
+			   }else{
+			      document.getElementById(id).style.display='none';
+			   }
+			}
+			</script>
+		</section>
+	    	<footer>
+			<br/>
+			<br/>
+	     		<p>Source : MOOC Introduction to Computer Science and Programming Using Python</p>
+	    	</footer>
+  	</body> 
+</html>
